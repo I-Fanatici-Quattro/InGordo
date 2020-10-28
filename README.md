@@ -1,0 +1,2 @@
+# InGordo
+Progetto mobile-computing
