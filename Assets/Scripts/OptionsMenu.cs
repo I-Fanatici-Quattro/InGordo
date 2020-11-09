@@ -50,6 +50,11 @@ public class OptionsMenu : MonoBehaviour
 
     }
 
+    public void Mute()
+    {
+        AudioListener.pause = !AudioListener.pause;
+    }
+
     public void SetMasterVol()
     {
         mastLabel.text = (mastSlider.value + 80).ToString();
