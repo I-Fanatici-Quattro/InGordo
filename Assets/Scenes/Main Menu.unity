@@ -2037,7 +2037,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000019073, y: -44.422}
+  m_AnchoredPosition: {x: -0.000019073, y: 6.5}
   m_SizeDelta: {x: 96.08423, y: 88.84497}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1276877736
@@ -3457,6 +3457,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1276877735}
     m_Modifications:
+    - target: {fileID: 1565422939621871999, guid: d1200802ada99a043ad1da98264a551a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565422939621871999, guid: d1200802ada99a043ad1da98264a551a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2bd0ccc10567397409f453ead876112a,
+        type: 3}
+    - target: {fileID: 1565422939621871999, guid: d1200802ada99a043ad1da98264a551a,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565422939621871999, guid: d1200802ada99a043ad1da98264a551a,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1591612958616543617, guid: d1200802ada99a043ad1da98264a551a,
         type: 3}
       propertyPath: m_Name
@@ -3530,12 +3551,12 @@ PrefabInstance:
     - target: {fileID: 1660031802462498673, guid: d1200802ada99a043ad1da98264a551a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 231.22772
       objectReference: {fileID: 0}
     - target: {fileID: 1660031802462498673, guid: d1200802ada99a043ad1da98264a551a,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 81.37398
       objectReference: {fileID: 0}
     - target: {fileID: 1660031802462498673, guid: d1200802ada99a043ad1da98264a551a,
         type: 3}
@@ -3567,6 +3588,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5356453271672004668, guid: d1200802ada99a043ad1da98264a551a,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8282304597720146314, guid: d1200802ada99a043ad1da98264a551a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -3597,6 +3623,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8282304597720146314, guid: d1200802ada99a043ad1da98264a551a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282304597720146314, guid: d1200802ada99a043ad1da98264a551a,
+        type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8282304597720146314, guid: d1200802ada99a043ad1da98264a551a,
+        type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e4217255733dfae4aa27cd567c81515f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1200802ada99a043ad1da98264a551a, type: 3}
 --- !u!224 &8062317385291975111 stripped
