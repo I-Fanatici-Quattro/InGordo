@@ -7,7 +7,6 @@ using System.Globalization;
 
 public class OptionsMenu : MonoBehaviour
 {
-
     public AudioMixer theMixer;
 
     public Slider mastSlider, musicSlider, sfxSlider;
@@ -15,6 +14,8 @@ public class OptionsMenu : MonoBehaviour
 
 
     public AudioSource sfxLoop;
+
+    private bool isMuted;
 
 
     // Start is called before the first frame update
@@ -42,17 +43,22 @@ public class OptionsMenu : MonoBehaviour
         musicLabel.text = (musicSlider.value + 80).ToString();
         sfxLabel.text = (sfxSlider.value + 80).ToString();
 
+        isMuted = PlayerPrefs.GetInt("MUTED") == 1;
+        AudioListener.pause = isMuted;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+    
     }
 
-    public void Mute()
+    public void MutePressed()
     {
-        AudioListener.pause = !AudioListener.pause;
+        isMuted = !isMuted;
+        AudioListener.pause = isMuted;
+        PlayerPrefs.SetInt("MUTED", isMuted ? 1 : 0);
     }
 
     public void SetMasterVol()
