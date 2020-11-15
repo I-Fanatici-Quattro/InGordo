@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ec703e7484cb5438803cf2e27ab80a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: Pause Setup
+  firstLevel: Pause Menu
   optionsScreen: {fileID: 1517610412}
 --- !u!1 &222122580
 GameObject:
