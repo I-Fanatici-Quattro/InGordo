@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
+
 public class Pavimento : MonoBehaviour
 {
-
-
-    [SerializeField]
-    int velocitaTerreno=0;
+    public int velocitaTerreno = 10;
     // Start is called before the first frame update
     void Start()
     {

@@ -8,6 +8,7 @@ public class CandleMove : MonoBehaviour
     public GameObject Cac;
     [SerializeField]
     int ritardoPrimaApparizione =0;
+    [SerializeField]
     float tempoDiApparizione=2.0f;
 
     // Start is called before the first frame update
