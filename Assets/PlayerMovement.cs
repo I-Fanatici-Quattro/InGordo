@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     private float screenWidth;
     bool jump = false;
-    float speed = 0.02f;
+    float speed = 0.2f;
 
     // Start is called before the first frame update
     void Start()
