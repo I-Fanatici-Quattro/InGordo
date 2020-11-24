@@ -59,7 +59,7 @@ public class DinoPlayer : MonoBehaviour
 
         }
 
-        if(coll.gameObject.tag=="Respawn")
+        if(coll.gameObject.tag=="Respawn" )
         {
             Application.LoadLevel ("provaMia");
         }
