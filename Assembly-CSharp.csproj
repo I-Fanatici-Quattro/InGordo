@@ -55,24 +55,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CharacterController2D.cs" />
      <Compile Include="Assets\Gordo\Demo\Prefabs\DAChkBox\Scripts\DAChkBox.cs" />
      <Compile Include="Assets\Gordo\Demo\Scripts\GordoDemo.cs" />
      <Compile Include="Assets\Gordo\Prefabs\DALogo\Scripts\DALogo.cs" />
      <Compile Include="Assets\Gordo\Prefabs\DASkeleton\Scripts\DALimb.cs" />
      <Compile Include="Assets\Gordo\Prefabs\DASkeleton\Scripts\DASkeleton.cs" />
-     <Compile Include="Assets\PlayerMovement.cs" />
-     <Compile Include="Assets\Script\CameraGeneraEnemies.cs" />
-     <Compile Include="Assets\Script\CameraPunta.cs" />
      <Compile Include="Assets\Script\Candle.cs" />
-     <Compile Include="Assets\Script\CandleMove.cs" />
-     <Compile Include="Assets\Script\DinoPlayer.cs" />
-     <Compile Include="Assets\Script\MoviementoEnemy.cs" />
      <Compile Include="Assets\Script\NuovoBG.cs" />
-     <Compile Include="Assets\Script\ParallaxBg.cs" />
-     <Compile Include="Assets\Script\Pavimento.cs" />
-     <Compile Include="Assets\Script\PlayerMovements.cs" />
-     <Compile Include="Assets\Script\Score.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
