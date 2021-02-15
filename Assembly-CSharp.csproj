@@ -60,8 +60,7 @@
      <Compile Include="Assets\Gordo\Prefabs\DALogo\Scripts\DALogo.cs" />
      <Compile Include="Assets\Gordo\Prefabs\DASkeleton\Scripts\DALimb.cs" />
      <Compile Include="Assets\Gordo\Prefabs\DASkeleton\Scripts\DASkeleton.cs" />
-     <Compile Include="Assets\Script\Candle.cs" />
-     <Compile Include="Assets\Script\NuovoBG.cs" />
+     <Compile Include="Assets\Scripts\Pavimento.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
