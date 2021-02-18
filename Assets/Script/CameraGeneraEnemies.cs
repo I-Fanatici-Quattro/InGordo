@@ -8,12 +8,21 @@ public class CameraGeneraEnemies : MonoBehaviour
 
     public GameObject asteroidPrefab;
     public GameObject bulletPrefab;
+    public GameObject ciboPrefab;
+    public GameObject AltroPrefab;
     
     public float respawnTime = 1.0f;
     private Vector2 screenBounds;
    
     public float respawnDueTime = 2.0f;
     private Vector2 screenBoundsDue;
+
+    
+    public float respawnTreTime = 3.0f;
+    private Vector2 screenBoundsTre;
+
+    public float respawnQuattroTime = 4.5f;
+    private Vector2 screenBoundsQuattro;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,25 +31,43 @@ public class CameraGeneraEnemies : MonoBehaviour
         
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(asteroidWave());
+
+        screenBoundsTre = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        StartCoroutine(asteroidWaveTre());
+
+        screenBoundsQuattro = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        StartCoroutine(asteroidWaveQuattro());
     }
 
     private void spawnEnemy()
     {
         GameObject a = Instantiate(asteroidPrefab) as GameObject;
-        a.transform.position = new Vector2(screenBounds.x * 2, Random.Range(-0.60f, -3.0f));
+        a.transform.position = new Vector2(screenBounds.x * 2, Random.Range(0.5f,3.5f));
     }
 
     private void spawnEnemyDue()
     {
         GameObject b = Instantiate(bulletPrefab) as GameObject;
-        b.transform.position = new Vector2(screenBoundsDue.x * 2, Random.Range(-0.60f, -3.0f));
+        b.transform.position = new Vector2(screenBoundsDue.x * 2, Random.Range(0.5f,3.5f));
+    }
+
+      private void spawnEnemyTre()
+    {
+        GameObject c = Instantiate(ciboPrefab) as GameObject;
+        c.transform.position = new Vector2(screenBoundsDue.x * 2, Random.Range(0.5f,3.5f));
+    }
+
+    private void spawnEnemyQuattro()
+    {
+        GameObject d = Instantiate(AltroPrefab) as GameObject;
+        d.transform.position = new Vector2(screenBoundsDue.x * 2, Random.Range(0.5f,3.5f));
     }
 
     IEnumerator asteroidWave()
     {
         while (true)
         {
-            yield return new WaitForSeconds(respawnTime);
+            yield return new WaitForSeconds(respawnTime+(Random.Range(respawnTime+1, respawnTime+3)));
             spawnEnemy();
         }
     }
@@ -53,6 +80,26 @@ public class CameraGeneraEnemies : MonoBehaviour
             respawnDueTime = Random.Range(respawnTime+1, respawnTime+3);
             yield return new WaitForSeconds(respawnDueTime);
             spawnEnemyDue();
+        }
+    }
+
+    IEnumerator asteroidWaveTre()
+    {
+        while (true)
+        {
+            respawnTreTime = Random.Range(respawnTime+2, respawnTime+4);
+            yield return new WaitForSeconds(respawnTreTime);
+            spawnEnemyTre();
+        }
+    }
+
+    IEnumerator asteroidWaveQuattro()
+    {
+        while (true)
+        {
+           respawnQuattroTime = Random.Range(respawnTime+3, respawnTime+4);
+            yield return new WaitForSeconds(respawnQuattroTime);
+            spawnEnemyQuattro();
         }
     }
 }

@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - DARig
+  - bad
+  - good
+  - barraVita
+  - destroy
+  - floor
   layers:
   - Default
   - TransparentFX
