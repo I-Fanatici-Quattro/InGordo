@@ -16,10 +16,10 @@ public class BackGroundMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position -= new Vector3 (velocitaTerreno*Time.deltaTime,0,-1.2f);
-        if(transform.position.x <= -22.21)
+        transform.position -= new Vector3 (velocitaTerreno*Time.deltaTime,0,0);
+        if(transform.position.x <= -20.28)
         {
-            transform.position =new Vector3(22.21f,transform.position.y,-1.2f);
+            transform.position =new Vector3(20.28f,transform.position.y,3);
         }
     }
 }

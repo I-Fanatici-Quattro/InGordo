@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/InGordo.unity
+    guid: cc363443db9b85f4b86d3620f778a831
+  - enabled: 1
+    path: Assets/InGordo2.unity
+    guid: e9ca0e80b37cebe48be024de2d5d9a5b
   m_configObjects: {}

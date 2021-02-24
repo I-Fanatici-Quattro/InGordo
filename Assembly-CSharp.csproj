@@ -73,9 +73,12 @@
      <Compile Include="Assets\Script\ParallaxBg.cs" />
      <Compile Include="Assets\Script\Pavimento.cs" />
      <Compile Include="Assets\Script\Pavimento2.cs" />
+     <Compile Include="Assets\Script\Pavimento3.cs" />
      <Compile Include="Assets\Script\PlayerMovements.cs" />
      <Compile Include="Assets\Script\Score.cs" />
+     <Compile Include="Assets\Script\ScoreScenaDue.cs" />
      <Compile Include="Assets\Vita.cs" />
+     <Compile Include="Assets\timerPunteggio.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

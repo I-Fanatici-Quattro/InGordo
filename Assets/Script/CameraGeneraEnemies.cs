@@ -54,13 +54,13 @@ public class CameraGeneraEnemies : MonoBehaviour
       private void spawnEnemyTre()
     {
         GameObject c = Instantiate(ciboPrefab) as GameObject;
-        c.transform.position = new Vector2(screenBoundsDue.x * 2, Random.Range(0.5f,3.5f));
+        c.transform.position = new Vector2(screenBoundsTre.x * 2, Random.Range(0.5f,3.5f));
     }
 
     private void spawnEnemyQuattro()
     {
         GameObject d = Instantiate(AltroPrefab) as GameObject;
-        d.transform.position = new Vector2(screenBoundsDue.x * 2, Random.Range(0.5f,3.5f));
+        d.transform.position = new Vector2(screenBoundsQuattro.x * 2, Random.Range(0.5f,3.5f));
     }
 
     IEnumerator asteroidWave()

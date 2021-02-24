@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,15 +7,15 @@ using System;
 public class Score : MonoBehaviour
 {
     //GameObject obj;
-    public Pavimento pav;
-    public Pavimento pav2;
+    public Pavimento3 pav;
+    public Pavimento3 pav2;
 
     //Punteggio chilometri
     [SerializeField]
     //public Text PuntiText;
 
     public Text currentscore;
-    public Text highScore;
+    //public Text highScore;
     public int score = 0;
 
     //vita Personaggio
@@ -42,12 +42,8 @@ public class Score : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pav.velocitaTerreno += 10;
-        pav2.velocitaTerreno += 10;
-
-
-        PlayerPrefs.SetInt("BestScore", 0);
-        highScore.text = PlayerPrefs.GetInt("BestScore").ToString();
+        //PlayerPrefs.SetInt("BestScore", 0);
+        //highScore.text = PlayerPrefs.GetInt("BestScore").ToString();
 
         healthBar= GameObject.FindGameObjectWithTag("barraVita").GetComponent<Image>();
         health=maxhealth;
@@ -62,15 +58,14 @@ public class Score : MonoBehaviour
     {
 
          //obj.GetComponent<Pavimento>().velocitaTerreno +=10;
-        
         score++;
         currentscore.text =score.ToString();
         
-        if (score > PlayerPrefs.GetInt("BestScore", 0))
+        /*if (score > PlayerPrefs.GetInt("BestScore", 0))
         {
             PlayerPrefs.SetInt("BestScore", score);
             highScore.text = PlayerPrefs.GetInt("BestScore").ToString();
-        }
+        }*/
         
     }
 
@@ -92,8 +87,7 @@ public class Score : MonoBehaviour
             else
             {
                 DelVita();
-            }
-            
+            } 
         }
     }
 
@@ -118,6 +112,11 @@ public class Score : MonoBehaviour
     {
         float damage=5;
         health -=damage;
+        /*if(health>90 && health<100)
+        {
+            Application.LoadLevel ("InGordo2");
+        }*/
+
         if(health>40){
             healtCurrent = (health * barWidth) / maxhealth;
             healthBar.rectTransform.sizeDelta = new Vector2(healtCurrent, barHeight);
