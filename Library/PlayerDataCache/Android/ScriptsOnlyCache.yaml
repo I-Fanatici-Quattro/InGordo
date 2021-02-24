@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - DArts.DALimb
     - MoviementoEnemy
     - Pavimento
+    - Pavimento3
     - PlayerMovement
     - Score
     Unity.2D.Animation.Editor.dll:
@@ -62,11 +63,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
     - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -77,31 +74,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11266}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11430}
     - Class: 114
-      Script: {instanceID: 11556}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11610}
+      Script: {instanceID: 11558}
     - Class: 114
-      Script: {instanceID: 12278}
+      Script: {instanceID: 11612}
     - Class: 114
-      Script: {instanceID: 12760}
+      Script: {instanceID: 12280}
     - Class: 114
-      Script: {instanceID: 12934}
+      Script: {instanceID: 12762}
     - Class: 114
-      Script: {instanceID: 13050}
+      Script: {instanceID: 12936}
     - Class: 114
-      Script: {instanceID: 13764}
+      Script: {instanceID: 13052}
     - Class: 114
       Script: {instanceID: 13766}
     - Class: 114
-      Script: {instanceID: 14240}
+      Script: {instanceID: 13768}
     - Class: 114
-      Script: {instanceID: 14276}
+      Script: {instanceID: 14246}
     - Class: 114
-      Script: {instanceID: 14388}
+      Script: {instanceID: 14282}
     - Class: 114
-      Script: {instanceID: 14408}
+      Script: {instanceID: 14394}
+    - Class: 114
+      Script: {instanceID: 14414}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -151,6 +150,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 223c449df88b06b0a5b9abdcd0b9899d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pavimento3
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -441,7 +446,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 1ac67ee0b14df91c14fcb61cbaa54560
+      Hash: 4e0f660fcd3f2d0d88ee663eb8a58453
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Score
@@ -613,6 +618,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 6fa849832b235ce288449ba5f7880e95
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreScenaDue
   - hash:
       serializedVersion: 2
       Hash: 8cd1cbba27f3cb1717254f668e9e0d5a

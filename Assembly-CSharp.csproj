@@ -79,6 +79,7 @@
      <Compile Include="Assets\Script\ScoreScenaDue.cs" />
      <Compile Include="Assets\Vita.cs" />
      <Compile Include="Assets\timerPunteggio.cs" />
+     <None Include="Assets\Font\Font Unity\Font Unity\Good People\Read This.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

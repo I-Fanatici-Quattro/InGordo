@@ -17,9 +17,9 @@ public class BackGroundMove : MonoBehaviour
     void Update()
     {
         transform.position -= new Vector3 (velocitaTerreno*Time.deltaTime,0,0);
-        if(transform.position.x <= -20.28)
+        if(transform.position.x <= -21.49)
         {
-            transform.position =new Vector3(20.28f,transform.position.y,3);
+            transform.position =new Vector3(21.49f,transform.position.y,3);
         }
     }
 }

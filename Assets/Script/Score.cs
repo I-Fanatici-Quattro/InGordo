@@ -6,6 +6,10 @@ using System;
 
 public class Score : MonoBehaviour
 {
+    //timer per la vita
+    public static float t=5f;
+    public static float t1=5f;
+
     //GameObject obj;
     public Pavimento3 pav;
     public Pavimento3 pav2;
@@ -14,9 +18,11 @@ public class Score : MonoBehaviour
     [SerializeField]
     //public Text PuntiText;
 
-    public Text currentscore;
+    public Text metri;
+    public Text chilometri;
     //public Text highScore;
-    public int score = 0;
+    public int scoreM = 0;
+    public int scoreK = 0;
 
     //vita Personaggio
 
@@ -30,8 +36,8 @@ public class Score : MonoBehaviour
     float healtCurrent;
 
     //punteggio
-    public int punti=0;
-    public Text ScoreText;
+   // public int punti=0;
+   // public Text ScoreText;
     
 
     /*void Awake()
@@ -58,14 +64,40 @@ public class Score : MonoBehaviour
     {
 
          //obj.GetComponent<Pavimento>().velocitaTerreno +=10;
-        score++;
-        currentscore.text =score.ToString();
+        t -= Time.deltaTime;
+        bool v=false;
+        while(t<0){
+            scoreM++;
+            if(scoreM<=9)
+            {
+                metri.text =scoreM.ToString();
+            }
+            else
+            {
+                scoreM=0;
+                metri.text =scoreM.ToString();
+                scoreK++;
+                chilometri.text = scoreK.ToString();
+
+            }
+            t=5;
+        }
+
+        t1 -=Time.deltaTime;
+        while(t1<0){
+            DelVita();
+            t1=5;
+        }
         
         /*if (score > PlayerPrefs.GetInt("BestScore", 0))
         {
             PlayerPrefs.SetInt("BestScore", score);
             highScore.text = PlayerPrefs.GetInt("BestScore").ToString();
         }*/
+        if(health==0)
+        {
+            Application.LoadLevel ("InGordo");
+        }
         
     }
 
@@ -75,19 +107,14 @@ public class Score : MonoBehaviour
         if(other.gameObject.tag=="good")
         {
             AddScore();
+            t1=5;
         }
 
         if (other.gameObject.tag =="bad")
         {
-            if(punti>=1)
-            {
-                DelScore();
-                DelVita();
-            }
-            else
-            {
-                DelVita();
-            } 
+            //DelScore();
+            DelVita();
+            t1=5; 
         }
     }
 
@@ -98,15 +125,15 @@ public class Score : MonoBehaviour
             healtCurrent = (health * barWidth) / maxhealth;
             healthBar.rectTransform.sizeDelta = new Vector2(healtCurrent, barHeight);
         }
-        punti++;
-        ScoreText.text= punti.ToString();
+        //punti++;
+        //ScoreText.text= punti.ToString();
     }
 
-    void DelScore()
+   /* void DelScore()
     {
         punti--;
         ScoreText.text=punti.ToString();
-    }
+    }*/
 
     void DelVita()
     {
@@ -135,10 +162,8 @@ public class Score : MonoBehaviour
             healthBar.rectTransform.sizeDelta = new Vector2(healtCurrent, barHeight);
 
         }
-
-        if(health==0)
-        {
-            Application.LoadLevel ("InGordo");
+        if(health<=0){
+            health=0;
         }
     }
 }
