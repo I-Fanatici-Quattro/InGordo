@@ -7,8 +7,8 @@ using System;
 public class Score : MonoBehaviour
 {
     //timer per la vita
-    public static float t=5f;
-    public static float t1=5f;
+    public static float t=5f;//tempo che serve a misurare dopo quanto il conta chilometri si deve aggiornare
+    public static float t1=5f;//tempo timer dopo il quale il personaggio perde vita perché non si nutre
 
     //GameObject obj;
     public Pavimento3 pav;
@@ -104,24 +104,32 @@ public class Score : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(other.gameObject);
-        if(other.gameObject.tag=="good")
-        {
-            AddScore();
-            t1=5;
-        }
+        if(health>=20){
+            if(other.gameObject.tag=="good")
+            {
+                AddScore(2);
+                t1=5;//ogni volta che il personaggio mangia il timer si resetta e torna a 5
+            }
 
-        if (other.gameObject.tag =="bad")
-        {
-            //DelScore();
-            DelVita();
-            t1=5; 
+            if (other.gameObject.tag =="bad")
+            {
+                //DelScore();
+                DelVita();
+                t1=5;//ogni volta che il personaggio mangia il timer si resetta e torna a 5
+            }
+        }
+        else{
+           if(other.gameObject.tag =="bad" || other.gameObject.tag=="good"){
+                AddScore(2);
+                t1=5;//ogni volta che il personaggio mangia il timer si resetta e torna a 5
+            }
         }
     }
 
-    void AddScore()
+    void AddScore(int a)
     {
         if(health>0 && health!=100){
-            health +=2;
+            health +=a;
             healtCurrent = (health * barWidth) / maxhealth;
             healthBar.rectTransform.sizeDelta = new Vector2(healtCurrent, barHeight);
         }
