@@ -10,6 +10,7 @@ TagManager:
   - barraVita
   - destroy
   - floor
+  - god
   layers:
   - Default
   - TransparentFX

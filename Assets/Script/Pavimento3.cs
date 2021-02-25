@@ -17,9 +17,9 @@ public class Pavimento3 : MonoBehaviour
     void Update()
     {
         transform.position -= new Vector3 (velocitaTerreno*Time.deltaTime,0,0);
-        if(transform.position.x <= -12.540)
+        if(transform.position.x <= -3.32)
         {
-            transform.position =new Vector3(12.540f,transform.position.y,0f);
+            transform.position =new Vector3(48.33f,transform.position.y,0f);
         }
     }
 }

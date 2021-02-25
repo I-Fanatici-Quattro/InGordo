@@ -8,7 +8,7 @@ public class Score : MonoBehaviour
 {
     //timer per la vita
     public static float t=5f;//tempo che serve a misurare dopo quanto il conta chilometri si deve aggiornare
-    public static float t1=5f;//tempo timer dopo il quale il personaggio perde vita perché non si nutre
+    public static float t1=20f;//tempo timer dopo il quale il personaggio perde vita perché non si nutre
 
     //GameObject obj;
     public Pavimento3 pav;
@@ -29,7 +29,7 @@ public class Score : MonoBehaviour
     //public GameObject image;
     float maxhealth=100;
 
-    float health;
+    public float health;
 
     Image healthBar;
     float barWidth,barHeight;
@@ -64,7 +64,7 @@ public class Score : MonoBehaviour
     {
 
          //obj.GetComponent<Pavimento>().velocitaTerreno +=10;
-        t -= Time.deltaTime;
+        t -= Time.deltaTime;//scaduto il tempo, i metri aumentano
         bool v=false;
         while(t<0){
             scoreM++;
@@ -83,10 +83,10 @@ public class Score : MonoBehaviour
             t=5;
         }
 
-        t1 -=Time.deltaTime;
+        t1 -=Time.deltaTime;//se questo tempo scade, la vita si decrementa
         while(t1<0){
             DelVita();
-            t1=5;
+            t1=20;
         }
         
         /*if (score > PlayerPrefs.GetInt("BestScore", 0))
@@ -108,25 +108,39 @@ public class Score : MonoBehaviour
             if(other.gameObject.tag=="good")
             {
                 AddScore(2);
-                t1=5;//ogni volta che il personaggio mangia il timer si resetta e torna a 5
+                t1=20;//ogni volta che il personaggio mangia il timer si resetta e torna a 5
             }
 
             if (other.gameObject.tag =="bad")
             {
                 //DelScore();
                 DelVita();
-                t1=5;//ogni volta che il personaggio mangia il timer si resetta e torna a 5
+                t1=20;//ogni volta che il personaggio mangia il timer si resetta e torna a 5
+            }
+
+            if (other.gameObject.tag =="god")
+            {
+                //DelScore();
+                float ripristino=maxhealth-healtCurrent;
+                AddScore(ripristino);
+                t1=20;//ogni volta che il personaggio mangia, il timer si resetta e torna a 5
+            }
+
+            if (other.gameObject.tag =="water")
+            {
+                AddScore(5);
+                t1=20;//ogni volta che il personaggio mangia, il timer si resetta e torna a 5
             }
         }
         else{
            if(other.gameObject.tag =="bad" || other.gameObject.tag=="good"){
                 AddScore(2);
-                t1=5;//ogni volta che il personaggio mangia il timer si resetta e torna a 5
+                t1=20;//ogni volta che il personaggio mangia il timer si resetta e torna a 5
             }
         }
     }
 
-    void AddScore(int a)
+    void AddScore(float a)
     {
         if(health>0 && health!=100){
             health +=a;
