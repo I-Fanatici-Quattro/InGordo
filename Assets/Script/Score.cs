@@ -10,10 +10,6 @@ public class Score : MonoBehaviour
     public static float t=5f;//tempo che serve a misurare dopo quanto il conta chilometri si deve aggiornare
     public static float t1=20f;//tempo timer dopo il quale il personaggio perde vita perché non si nutre
 
-    //GameObject obj;
-    public Pavimento3 pav;
-    public Pavimento3 pav2;
-
     //Punteggio chilometri
     [SerializeField]
     //public Text PuntiText;

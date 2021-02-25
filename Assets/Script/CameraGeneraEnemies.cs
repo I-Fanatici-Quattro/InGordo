@@ -104,7 +104,7 @@ public class CameraGeneraEnemies : MonoBehaviour
     {
         while (true)
         {
-            respawnDueTime = Random.Range(respawnDueTime+2, respawnDueTime+3);
+            respawnDueTime = Random.Range(respawnTime+2, respawnTime+3);
             yield return new WaitForSeconds(respawnDueTime);
             spawnEnemyDue();
         }
@@ -114,7 +114,7 @@ public class CameraGeneraEnemies : MonoBehaviour
     {
         while (true)
         {
-            respawnTreTime = Random.Range(respawnTreTime+3, respawnTreTime+4);
+            respawnTreTime = Random.Range(respawnDueTime+3, respawnDueTime+5);
             yield return new WaitForSeconds(respawnTreTime);
             spawnEnemyTre();
         }
@@ -124,13 +124,13 @@ public class CameraGeneraEnemies : MonoBehaviour
     {
         while (true)
         {
-           respawnQuattroTime = Random.Range(respawnQuattroTime+3, respawnQuattroTime+4);
+           respawnQuattroTime = Random.Range(respawnTreTime+3, respawnTreTime+4);
             yield return new WaitForSeconds(respawnQuattroTime);
             spawnEnemyQuattro();
         }
     }
 
-    IEnumerator asteroidWaveCinque()
+    IEnumerator asteroidWaveCinque()//fagiolo
     {
         while (true)
         {
@@ -145,7 +145,7 @@ public class CameraGeneraEnemies : MonoBehaviour
         }
     }
 
-    IEnumerator asteroidWaveSei()
+    IEnumerator asteroidWaveSei()//acqua
     {
         while (true)
         {

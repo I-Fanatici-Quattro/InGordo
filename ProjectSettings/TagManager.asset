@@ -11,6 +11,7 @@ TagManager:
   - destroy
   - floor
   - god
+  - water
   layers:
   - Default
   - TransparentFX
