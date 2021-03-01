@@ -6,7 +6,6 @@ ScriptsOnlyBuild:
     - CharacterController2D
     - DArts.DALimb
     - MoviementoEnemy
-    - Pavimento
     - Pavimento3
     - PlayerMovement
     - Score
@@ -32,7 +31,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/InGordo.unity:
+    Assets/Scenes/InGordo.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -72,35 +71,33 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11430}
+      Script: {instanceID: 11432}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11558}
+      Script: {instanceID: 11560}
     - Class: 114
-      Script: {instanceID: 11612}
+      Script: {instanceID: 11614}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12282}
     - Class: 114
-      Script: {instanceID: 12762}
+      Script: {instanceID: 12764}
     - Class: 114
-      Script: {instanceID: 12936}
+      Script: {instanceID: 12938}
     - Class: 114
-      Script: {instanceID: 13052}
-    - Class: 114
-      Script: {instanceID: 13766}
+      Script: {instanceID: 13054}
     - Class: 114
       Script: {instanceID: 13768}
     - Class: 114
-      Script: {instanceID: 14246}
+      Script: {instanceID: 14248}
     - Class: 114
-      Script: {instanceID: 14282}
+      Script: {instanceID: 14284}
     - Class: 114
-      Script: {instanceID: 14394}
+      Script: {instanceID: 14396}
     - Class: 114
-      Script: {instanceID: 14414}
+      Script: {instanceID: 14416}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -152,7 +149,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 223c449df88b06b0a5b9abdcd0b9899d
+      Hash: dd05c11dd8829392da99dede654e6afc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Pavimento3
@@ -446,7 +443,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 4e0f660fcd3f2d0d88ee663eb8a58453
+      Hash: c108a9f9bcba30d996ff1f0cc68375bc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Score
@@ -638,7 +635,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: e8862156046a5343bad24c3a9ab1ccf3
+      Hash: 3aa0b10878d0e3df4909ce7ba50e9bc3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraGeneraEnemies
@@ -740,5 +737,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 13
   scenePathNames:
-  - Assets/InGordo.unity
+  - Assets/Scenes/InGordo.unity
   playerPath: C:/Users/utente/OneDrive/Documenti/ProgettiUnity/provaGiocoUnity.apk
