@@ -9,24 +9,12 @@ public class DinoPlayer : MonoBehaviour
     [SerializeField]
     int salto=4;
     public bool IJ;
-    public int point=0;
-    public Text scoreText;
 
-    public Text currentScore;
-    public Text highScore;
-    public int Score = 0;
-
-    public AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
     {
        IJ =false;
-
-       PlayerPrefs.SetInt("BestScore", 0);
-       highScore.text = PlayerPrefs.GetInt("BestScore").ToString();
-
-        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,50 +26,15 @@ public class DinoPlayer : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = new Vector3(0,salto,0);
             IJ=true;
         }
-
-
-        Score++;
-        currentScore.text = Score.ToString();
-
-        if (Score > PlayerPrefs.GetInt("BestScore", 0))
-        {
-            PlayerPrefs.SetInt("BestScore", Score);
-            highScore.text = PlayerPrefs.GetInt("BestScore").ToString();
-        }
     }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
 
-        if(coll.gameObject.tag=="Finish")
+        if(coll.gameObject.tag=="floor" || coll.gameObject.tag=="platform")
         {
             IJ=false;
 
-        }
-
-        if(coll.gameObject.tag=="Respawn")
-        {
-            Application.LoadLevel ("provaMia");
-        }
-
-        if(coll.gameObject.tag=="bullet")
-        {
-            audio.Play();
-            point++;
-            scoreText.text = point.ToString();
-        }
-
-        if (coll.gameObject.tag == "proiett")
-        {
-            audio.Play();
-            if (point >= 2)
-            {
-                point = point - 2;
-            }
-            else
-                point = 0;
-           
-            scoreText.text = point.ToString();
         }
     }
 }

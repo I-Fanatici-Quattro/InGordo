@@ -61,6 +61,7 @@
      <Compile Include="Assets\Gordo\Prefabs\DALogo\Scripts\DALogo.cs" />
      <Compile Include="Assets\Gordo\Prefabs\DASkeleton\Scripts\DALimb.cs" />
      <Compile Include="Assets\Gordo\Prefabs\DASkeleton\Scripts\DASkeleton.cs" />
+     <Compile Include="Assets\MovimentoPlatforms.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\Script\BackGroundMove.cs" />
      <Compile Include="Assets\Script\CameraGeneraEnemies.cs" />

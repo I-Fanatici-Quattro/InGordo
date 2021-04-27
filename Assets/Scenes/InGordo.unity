@@ -398,15 +398,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 404906, guid: b6ed95875921a1f4f9c6f17b9f812b11, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.516033
+      value: 0.35933086
       objectReference: {fileID: 0}
     - target: {fileID: 404906, guid: b6ed95875921a1f4f9c6f17b9f812b11, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.516033
+      value: 0.35933086
       objectReference: {fileID: 0}
     - target: {fileID: 404906, guid: b6ed95875921a1f4f9c6f17b9f812b11, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.516033
+      value: 0.35933086
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6ed95875921a1f4f9c6f17b9f812b11, type: 3}
@@ -980,7 +980,7 @@ GameObject:
   - component: {fileID: 485197840}
   m_Layer: 0
   m_Name: P2
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1184,6 +1184,10 @@ MonoBehaviour:
     type: 3}
   Bobs: {fileID: 2638321928545934993, guid: 62a13b95410c53f40b356e972a4f05d6, type: 3}
   water: {fileID: 997815504473373577, guid: ca5a1f49f92bf15499302403c55eb050, type: 3}
+  platforms: {fileID: 1667369964279028989, guid: da28aba72dc9ee34f9813230c4f510bc,
+    type: 3}
+  platformsDue: {fileID: 4099159002814717935, guid: f86cc61677ded9a4490f5f0483f5aa35,
+    type: 3}
   h: {fileID: 1816010525}
 --- !u!20 &519420031
 Camera:
@@ -1351,7 +1355,7 @@ GameObject:
   - component: {fileID: 591808888}
   m_Layer: 0
   m_Name: P1
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2295,8 +2299,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177174835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.44, y: -1.51, z: -56.25}
-  m_LocalScale: {x: 0.66073, y: 0.66073, z: 0.66073}
+  m_LocalPosition: {x: -8.44, y: -1.44, z: -56.25}
+  m_LocalScale: {x: 0.66073, y: 1.007415, z: 0.66073}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -3193,7 +3197,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -3278,6 +3282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   metri: {fileID: 448222570}
   chilometri: {fileID: 2051890162}
+  player: {fileID: 1816010516}
   scoreM: 0
   scoreK: 0
   health: 0
@@ -3304,6 +3309,20 @@ EdgeCollider2D:
   - {x: -2.2188103, y: 2.9988837}
   - {x: -2.3032508, y: 1.3890511}
   - {x: -2.2765255, y: 0.8190491}
+--- !u!114 &1816010527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816010516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb560992346c6b4fbcf8020791aff7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  salto: 23
+  IJ: 0
 --- !u!1 &1853811267
 GameObject:
   m_ObjectHideFlags: 0
@@ -3443,7 +3462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880829741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.63, y: -1.23, z: -56.25}
+  m_LocalPosition: {x: -6.03, y: -1.23, z: -56.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -6,7 +6,6 @@ using System;
 
 public class Score : MonoBehaviour
 {
-    //timer per la vita
     public static float t=5f;//tempo che serve a misurare dopo quanto il conta chilometri si deve aggiornare
     public static float t1=20f;//tempo timer dopo il quale il personaggio perde vita perché non si nutre
 
@@ -77,38 +76,41 @@ public class Score : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(other.gameObject);
-        if(health>=20){//se la vita è maggiore di un certo valore, allora tutto normale
-            if(other.gameObject.tag=="good")
-            {
-                AddScore(2);
-                t1=20;//ogni volta che il personaggio mangia il timer si resetta 
-            }
+    if(other.gameObject.tag=="good" || other.gameObject.tag=="bad" || other.gameObject.tag=="god" || other.gameObject.tag=="water")
+        {
+            Destroy(other.gameObject);
+            if(health>=20){//se la vita è maggiore di un certo valore, allora tutto normale
+                if(other.gameObject.tag=="good")
+                {
+                    AddScore(2);
+                    t1=20;//ogni volta che il personaggio mangia il timer si resetta 
+                }
 
-            if (other.gameObject.tag =="bad")
-            {
-                DelVita();
-                t1=20;//ogni volta che il personaggio mangia il timer si resetta
-            }
+                if (other.gameObject.tag =="bad")
+                {
+                    DelVita();
+                    t1=20;//ogni volta che il personaggio mangia il timer si resetta
+                }
 
-            if (other.gameObject.tag =="god")
-            {
-                //DelScore();
-                float ripristino=maxhealth-healtCurrent;
-                AddScore(ripristino);
-                t1=20;//ogni volta che il personaggio mangia, il timer si resetta 
-            }
+                if (other.gameObject.tag =="god")
+                {
+                    //DelScore();
+                    float ripristino=maxhealth-healtCurrent;
+                    AddScore(ripristino);
+                    t1=20;//ogni volta che il personaggio mangia, il timer si resetta 
+                }
 
-            if (other.gameObject.tag =="water")
-            {
-                AddScore(5);
-                t1=20;//ogni volta che il personaggio mangia, il timer si resetta 
+                if (other.gameObject.tag =="water")
+                {
+                    AddScore(50);
+                    t1=20;//ogni volta che il personaggio mangia, il timer si resetta 
+                }
             }
-        }
-        else{//se la vita è minore di un certo valore, hai comunque bisogno di un po' di zuccheri, quindi anche i cibi malsani possono salvarti
-           if(other.gameObject.tag =="bad" || other.gameObject.tag=="good"){
-                AddScore(2);
-                t1=20;//ogni volta che il personaggio mangia il timer si resettA
+            else{//se la vita è minore di un certo valore, hai comunque bisogno di un po' di zuccheri, quindi anche i cibi malsani possono salvarti
+                if(other.gameObject.tag =="bad" || other.gameObject.tag=="good"){
+                    AddScore(2);
+                    t1=20;//ogni volta che il personaggio mangia il timer si resettA
+                }
             }
         }
     }
@@ -117,6 +119,9 @@ public class Score : MonoBehaviour
     {
         if(health>0 && health!=100){
             health +=a;
+            if(health>100){
+                health=100;
+            }
             healtCurrent = (health * barWidth) / maxhealth;
             healthBar.rectTransform.sizeDelta = new Vector2(healtCurrent, barHeight);
 
