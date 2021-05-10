@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/CibiGioco/Platform.prefab.meta
 guid: da28aba72dc9ee34f9813230c4f510bc
 PrefabImporter:
+=======
+guid: bbc1e96c271e4094ca4f5bc084dd3fe0
+DefaultImporter:
+>>>>>>> Develop:Assets/InGordo.unity.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

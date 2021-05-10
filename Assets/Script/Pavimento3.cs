@@ -8,7 +8,7 @@ public class Pavimento3 : MonoBehaviour
 {   
     public Score v;
     bool ver=false;
-    float tempo=10f;//durta dell'aumento velocità del terreno
+   
     public int velocitaTerreno = 10;
     // Start is called before the first frame update
     void Start()
