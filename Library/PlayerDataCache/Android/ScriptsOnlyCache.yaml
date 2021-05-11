@@ -25,7 +25,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/InGordo.unity:
+    Assets/Scenes/GordoDef.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -65,37 +65,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 13880}
+      Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 13974}
+      Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 13992}
+      Script: {instanceID: 11364}
     - Class: 114
-      Script: {instanceID: 14044}
+      Script: {instanceID: 11416}
     - Class: 114
-      Script: {instanceID: 14084}
+      Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 14472}
+      Script: {instanceID: 11846}
     - Class: 114
-      Script: {instanceID: 14734}
+      Script: {instanceID: 12112}
     - Class: 114
-      Script: {instanceID: 14828}
+      Script: {instanceID: 12206}
     - Class: 114
-      Script: {instanceID: 14908}
+      Script: {instanceID: 12284}
     - Class: 114
-      Script: {instanceID: 14992}
+      Script: {instanceID: 12368}
     - Class: 114
-      Script: {instanceID: 15338}
+      Script: {instanceID: 12730}
     - Class: 114
-      Script: {instanceID: 15480}
+      Script: {instanceID: 12872}
     - Class: 114
-      Script: {instanceID: 15620}
+      Script: {instanceID: 13014}
     - Class: 114
-      Script: {instanceID: 15640}
+      Script: {instanceID: 13034}
     - Class: 114
-      Script: {instanceID: 15706}
+      Script: {instanceID: 13100}
     - Class: 114
-      Script: {instanceID: 15722}
+      Script: {instanceID: 13114}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -115,6 +115,18 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: aa88ae22474df55295327e4ee99e5a24
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Toggle
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -417,12 +429,6 @@ ScriptsOnlyBuild:
     className: AudioManager
   - hash:
       serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
-  - hash:
-      serializedVersion: 2
       Hash: f84d945e5e1ca985698660fc26e9657f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -663,12 +669,6 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
-      Hash: aa88ae22474df55295327e4ee99e5a24
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Toggle
-  - hash:
-      serializedVersion: 2
       Hash: 4df9f7f58b26785a1bb6bf34b9c02952
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -705,5 +705,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 13
   scenePathNames:
-  - Assets/Scenes/InGordo.unity
-  playerPath: C:/Users/utente/OneDrive/Documenti/ProgettiUnity/provaGiocoUnity.apk
+  - Assets/Scenes/GordoDef.unity
+  playerPath: C:/Users/utente/OneDrive/Documenti/InGordo/provaGiocoUnity.apk
